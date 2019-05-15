@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_948477_xk9dcdh07lo.css">
+    <link rel="stylesheet" href="/static/reset/reset.css" type="text/css">
+    <title>gshop</title>
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+    <!--解决移动端点击事件0.3延迟问题: 使用fastclick库-->
+    <script>
+      if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body);
+        }, false);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+   <script>
+     (function () {
+       var targetW = 750; // 设计图的宽度
+       //布局视口 = 理想视口 的宽度
+       var layoutW = document.documentElement.clientWidth;
+       var scale = layoutW / targetW;
+       var metaNode = document.querySelector("meta[name=viewport]");
+       metaNode.content ="initial-scale="+scale+",user-scalable=no,maximum-scale="+scale+",minimum-scale="+scale+"";
+     })()
+   </script>
+  </body>
+</html>
